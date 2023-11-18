@@ -11,9 +11,10 @@ const specialCharacters = "~!@#$%^&*()_+=-|{}[]?><";
 
 const all = upperCaseLetters + lowerCaseLetters + numbers + specialCharacters;
 
-let password = '';
+let password;
 
 function generatePassword(){
+  password = '';
   for(i = 0; i < length; i++){
     let randomNumber = Math.floor(Math.random()*8);
 
@@ -39,7 +40,7 @@ async function copyPassword() {
   passwordDisplay.select();
   try {
     await navigator.clipboard.writeText(password);
-    console.log('Content copied to clipboard');
+    alert('Password copied to clipboard');
   } catch (err) {
     console.error('Failed to copy: ', err);
   }
