@@ -11,8 +11,9 @@ const specialCharacters = "~!@#$%^&*()_+=-|{}[]?><";
 
 const all = upperCaseLetters + lowerCaseLetters + numbers + specialCharacters;
 
+let password = '';
+
 function generatePassword(){
-  let password = '';
   for(i = 0; i < length; i++){
     let randomNumber = Math.floor(Math.random()*8);
 
@@ -31,8 +32,21 @@ function generatePassword(){
     }
   }
   passwordDisplay.value = password;
+  return password;
 }
 
+async function copyPassword() {
+  passwordDisplay.select();
+  try {
+    await navigator.clipboard.writeText(password);
+    console.log('Content copied to clipboard');
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+}
+
+const copyBtn = document.querySelector(".copy")
 const generateButton = document.querySelector("button");
 
 generateButton.addEventListener("click", generatePassword);
+copyBtn.addEventListener("click", copyPassword)
