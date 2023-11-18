@@ -51,3 +51,22 @@ img {
   outline: 0;
   font-size: 35px;
 }
+
+button img{
+  width: 50px;
+  margin-right: 8px;
+  transform: rotate(5deg);
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
