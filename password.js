@@ -14,20 +14,20 @@ const all = [upperCaseLetters, lowerCaseLetters, numbers, specialCharacters];
 function generatePassword(){
   let password = '';
   for(i = 0; i < length; i++){
-    let randomNumber = Math.round(Math.random()*7);
+    let randomNumber = Math.floor(Math.random()*8);
     console.log(randomNumber);
 
     if (randomNumber === 0 || randomNumber === 4){
-      let randomIndex = Math.round(Math.random()*(upperCaseLetters.length-1));
+      let randomIndex = Math.floor(Math.random()*(upperCaseLetters.length));
       password += upperCaseLetters[randomIndex];
     } else if (randomNumber === 1 || randomNumber === 5){
-        let randomIndex = Math.round(Math.random()*(lowerCaseLetters.length-1));
+        let randomIndex = Math.floor(Math.random()*(lowerCaseLetters.length));
         password += lowerCaseLetters[randomIndex];
     } else if (randomNumber === 2 || randomNumber === 6){
-      let randomIndex = Math.round(Math.random()*(numbers.length-1));
+      let randomIndex = Math.floor(Math.random()*(numbers.length));
       password += numbers[randomIndex];
     } else if (randomNumber === 3 || randomNumber === 7){
-      let randomIndex = Math.round(Math.random()*(specialCharacters.length-1));
+      let randomIndex = Math.floor(Math.random()*(specialCharacters.length));
       password += specialCharacters[randomIndex];
     }
   }
