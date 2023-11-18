@@ -32,4 +32,5 @@ function generatePassword(){
     }
   }
   console.log(password);
+  passwordDisplay.value = password;
 }
