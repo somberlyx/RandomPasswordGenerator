@@ -4,3 +4,18 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   box-sizing: border-box;
 }
+
+body {
+  background: #353535;
+  color: #fff;
+}
+
+img {
+  width: 50px;
+}
+
+.container {
+  margin: 12%;
+  width: 90%;
+  max-width: 900px;
+}
