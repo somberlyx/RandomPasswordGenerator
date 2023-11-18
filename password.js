@@ -7,7 +7,7 @@ const lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
 
 const numbers = "1234567890";
 
-const specialCharacters = "~!@#$%^&*()_+=-;/.,?><";
+const specialCharacters = "~!@#$%^&*()_+=-|{}[]?><";
 
 const all = [upperCaseLetters, lowerCaseLetters, numbers, specialCharacters];
 
