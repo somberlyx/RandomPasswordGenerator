@@ -9,13 +9,12 @@ const numbers = "1234567890";
 
 const specialCharacters = "~!@#$%^&*()_+=-|{}[]?><";
 
-const all = [upperCaseLetters, lowerCaseLetters, numbers, specialCharacters];
+const all = upperCaseLetters + lowerCaseLetters + numbers + specialCharacters;
 
 function generatePassword(){
   let password = '';
   for(i = 0; i < length; i++){
     let randomNumber = Math.floor(Math.random()*8);
-    console.log(randomNumber);
 
     if (randomNumber === 0 || randomNumber === 4){
       let randomIndex = Math.floor(Math.random()*(upperCaseLetters.length));
@@ -31,6 +30,9 @@ function generatePassword(){
       password += specialCharacters[randomIndex];
     }
   }
-  console.log(password);
   passwordDisplay.value = password;
 }
+
+const generateButton = document.querySelector("button");
+
+generateButton.addEventListener("click", generatePassword);
