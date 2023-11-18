@@ -12,6 +12,7 @@ body {
 
 img {
   width: 50px;
+  cursor: pointer;
 }
 
 .container {
@@ -22,7 +23,7 @@ img {
 
 .display {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 30px;
   background: #fff;
   color: #333;
@@ -31,4 +32,22 @@ img {
   justify-content: space-between;
   padding: 20px 20px;
   border-radius: 5px;
+}
+
+.container h1 {
+  font-weight: 500;
+  font-size: 45px;
+  margin-bottom: 50px;
+}
+
+.container h1 span {
+  padding-bottom: 20px;
+  border-bottom: 4px solid #fff;
+  font-weight: 900;
+}
+
+.display input {
+  border: 0;
+  outline: 0;
+  font-size: 35px;
 }
